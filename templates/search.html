@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search in PDF</title>
+</head>
+<body>
+    <h1>Search in PDF</h1>
+    <form action="/search/" method="get">
+        <input type="text" name="query" placeholder="Enter word" value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <form action="/upload/" method="post" enctype="multipart/form-data" style="display:inline-block; margin-left:10px;">
+        <input type="file" name="pdf_file" accept=".pdf">
+        <button type="submit">Yükle</button>
+    </form>
+
+    <h2>Results:</h2>
+    <ul>
+        {% for result in results %}
+            <li><strong>{{ result.title }}</strong></li>
+            <p>{{ result.highlighted_text|safe }}</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
