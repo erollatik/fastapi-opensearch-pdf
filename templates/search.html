@@ -10,10 +10,11 @@
         <button type="submit">Search</button>
     </form>
 
-    <form action="/upload/" method="post" enctype="multipart/form-data" style="display:inline-block; margin-left:10px;">
-        <input type="file" name="pdf_file" accept=".pdf">
-        <button type="submit">Yükle</button>
-    </form>
+   <form action="/upload/" enctype="multipart/form-data" method="post">
+    <input name="pdf_files" type="file" multiple>
+    <input type="submit">
+   </form>
+
 
     <h2>Results:</h2>
     <ul>
