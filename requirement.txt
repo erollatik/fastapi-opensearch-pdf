@@ -3,3 +3,7 @@ uvicorn
 opensearch-py
 pdfplumber
 python-dotenv
+pymupdf
+pytesseract
+jinja2
+python-multipart
